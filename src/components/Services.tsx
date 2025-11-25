@@ -1,4 +1,3 @@
-```javascript
 import React from 'react';
 import {
   Building2,
@@ -53,104 +52,104 @@ const Services = () => {
 
   const handleSolicitarServico = (serviceName: string) => {
     const message = encodeURIComponent(
-      `Olá! Gostaria de mais informações sobre o serviço: ${ serviceName } `
+      `Olá! Gostaria de mais informações sobre o serviço: ${serviceName} `
     );
     window.open(`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=${message}`, '_blank');
   };
 
-return (
-  <section
-    id="servicos"
-    className="py-20 bg-gray-50 dark:bg-slate-800/50 transition-colors duration-300 relative overflow-hidden"
-  >
-    {/* Decorative Background */}
-    <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#0C6E8E]/5 to-transparent rounded-bl-full pointer-events-none"></div>
-    <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-[#1F5168]/5 to-transparent rounded-tr-full pointer-events-none"></div>
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#133A4C] dark:text-white mb-6">
-            Nossos{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0C6E8E] to-[#1F5168]">
-              Serviços
-            </span>
-          </h2>
-          <p className="text-xl text-[#7C8A96] dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Soluções completas e personalizadas para a gestão do seu condomínio
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#0C6E8E] to-[#1F5168] mx-auto mt-6"></div>
-        </div>
+  return (
+    <section
+      id="servicos"
+      className="py-20 bg-gray-50 dark:bg-slate-800/50 transition-colors duration-300 relative overflow-hidden"
+    >
+      {/* Decorative Background */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#0C6E8E]/5 to-transparent rounded-bl-full pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-[#1F5168]/5 to-transparent rounded-tr-full pointer-events-none"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#133A4C] dark:text-white mb-6">
+              Nossos{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0C6E8E] to-[#1F5168]">
+                Serviços
+              </span>
+            </h2>
+            <p className="text-xl text-[#7C8A96] dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Soluções completas e personalizadas para a gestão do seu condomínio
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#0C6E8E] to-[#1F5168] mx-auto mt-6"></div>
+          </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={service.title}
-                className="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/20"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Icon */}
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#0C6E8E] to-[#1F5168] rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-[#133A4C] dark:text-white mb-4 group-hover:text-[#0C6E8E] dark:group-hover:text-[#0C6E8E] transition-colors duration-300">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-[#7C8A96] dark:text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-[#7C8A96] dark:text-gray-300">
-                      <div className="w-2 h-2 bg-[#0C6E8E] rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA Button */}
-                <button
-                  onClick={() => handleSolicitarServico(service.title)}
-                  className="group/btn flex items-center justify-between w-full bg-gradient-to-r from-[#0C6E8E] to-[#1F5168] hover:from-[#0A5A73] hover:to-[#1A4559] text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <div
+                  key={service.title}
+                  className="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/20"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <span className="font-medium">Saiba Mais</span>
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </button>
-              </div>
-            );
-          })}
-        </div>
+                  {/* Icon */}
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#0C6E8E] to-[#1F5168] rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
 
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-[#133A4C] to-[#1F5168] rounded-3xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">
-            Precisa de um serviço personalizado?
-          </h3>
-          <p className="text-xl opacity-90 mb-8">
-            Desenvolvemos soluções sob medida para as necessidades específicas do seu condomínio
-          </p>
-          <a
-            href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-white hover:bg-gray-100 text-[#133A4C] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            Solicitar Orçamento Personalizado
-          </a>
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-[#133A4C] dark:text-white mb-4 group-hover:text-[#0C6E8E] dark:group-hover:text-[#0C6E8E] transition-colors duration-300">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-[#7C8A96] dark:text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Features */}
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-[#7C8A96] dark:text-gray-300">
+                        <div className="w-2 h-2 bg-[#0C6E8E] rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA Button */}
+                  <button
+                    onClick={() => handleSolicitarServico(service.title)}
+                    className="group/btn flex items-center justify-between w-full bg-gradient-to-r from-[#0C6E8E] to-[#1F5168] hover:from-[#0A5A73] hover:to-[#1A4559] text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    <span className="font-medium">Saiba Mais</span>
+                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center bg-gradient-to-r from-[#133A4C] to-[#1F5168] rounded-3xl p-12 text-white">
+            <h3 className="text-3xl font-bold mb-4">
+              Precisa de um serviço personalizado?
+            </h3>
+            <p className="text-xl opacity-90 mb-8">
+              Desenvolvemos soluções sob medida para as necessidades específicas do seu condomínio
+            </p>
+            <a
+              href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white hover:bg-gray-100 text-[#133A4C] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              Solicitar Orçamento Personalizado
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 };
 
 export default Services;
