@@ -130,7 +130,7 @@ _Mensagem enviada através do site_
                         rel="noopener noreferrer"
                         className="text-[#0C6E8E] hover:text-[#0A5A73] transition-colors duration-200"
                       >
-                        (84) 99177-6106
+                        {CONTACT_INFO.WHATSAPP_DISPLAY}
                       </a>
                     </div>
                   </div>
@@ -323,8 +323,8 @@ _Mensagem enviada através do site_
                   type="submit"
                   disabled={isSubmitting}
                   className={`w-full flex items-center justify-center space-x-2 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${isSubmitting
-                      ? 'bg-gray-400 cursor-not-allowed'
-                      : 'bg-gradient-to-r from-[#0C6E8E] to-[#1F5168] hover:from-[#0A5A73] hover:to-[#1A4559] text-white'
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-gradient-to-r from-[#0C6E8E] to-[#1F5168] hover:from-[#0A5A73] hover:to-[#1A4559] text-white'
                     }`}
                 >
                   {isSubmitting ? (
