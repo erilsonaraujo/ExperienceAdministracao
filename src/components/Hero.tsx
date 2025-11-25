@@ -104,13 +104,13 @@ const Hero = () => {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Edifícios residenciais modernos representando gestão condominial"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
-              
+
               {/* Floating Stats Card */}
               <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl">
                 <div className="text-center">

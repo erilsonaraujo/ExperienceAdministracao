@@ -1,5 +1,5 @@
 export const CONTACT_INFO = {
-    WHATSAPP_NUMBER: '5584991776106',
-    WHATSAPP_DISPLAY: '(84) 99177-6106',
+    WHATSAPP_NUMBER: '5584991651655',
+    WHATSAPP_DISPLAY: '(84) 99165-1655',
     EMAIL: 'contato@eadministracao.com.br',
 };

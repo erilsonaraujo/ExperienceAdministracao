@@ -21,7 +21,6 @@ const Header = () => {
     { name: 'Sobre', href: '#sobre' },
     { name: 'Serviços', href: '#servicos' },
     { name: 'Processos', href: '#processos' },
-    { name: 'Equipe', href: '#equipe' },
     { name: 'Depoimentos', href: '#depoimentos' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contato', href: '#contato' },
@@ -37,11 +36,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -67,11 +65,10 @@ const Header = () => {
                 <li key={item.name}>
                   <button
                     onClick={() => scrollToSection(item.href)}
-                    className={`font-medium transition-colors duration-200 ${
-                      isScrolled 
-                        ? 'text-[#1F5168] dark:text-gray-300 hover:text-[#0C6E8E] dark:hover:text-white' 
-                        : 'text-white hover:text-[#E5EBEE]'
-                    }`}
+                    className={`font-medium transition-colors duration-200 ${isScrolled
+                        ? 'text-[#1F5168] dark:text-gray-300 hover:text-[#0C6E8E] dark:hover:text-white'
+                        : 'text-[#1F5168] dark:text-white hover:text-[#0C6E8E] dark:hover:text-gray-300'
+                      }`}
                   >
                     {item.name}
                   </button>
@@ -85,15 +82,14 @@ const Header = () => {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className={`p-2 rounded-lg transition-colors duration-200 ${
-                isScrolled 
-                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700' 
+              className={`p-2 rounded-lg transition-colors duration-200 ${isScrolled
+                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
                   : 'bg-white/20 hover:bg-white/30 backdrop-blur-sm'
-              }`}
+                }`}
               aria-label={theme === 'light' ? 'Ativar modo escuro' : 'Ativar modo claro'}
             >
               {theme === 'light' ? (
-                <Moon className={`w-5 h-5 ${isScrolled ? 'text-[#1F5168]' : 'text-white'}`} />
+                <Moon className={`w-5 h-5 ${isScrolled ? 'text-[#1F5168]' : 'text-[#1F5168] dark:text-white'}`} />
               ) : (
                 <Sun className="w-5 h-5 text-yellow-500" />
               )}
@@ -114,17 +110,16 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
-                isScrolled 
-                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700' 
+              className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${isScrolled
+                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
                   : 'bg-white/20 hover:bg-white/30 backdrop-blur-sm'
-              }`}
+                }`}
               aria-label="Abrir menu"
             >
               {isMenuOpen ? (
-                <X className={`w-6 h-6 ${isScrolled ? 'text-[#1F5168] dark:text-white' : 'text-white'}`} />
+                <X className={`w-6 h-6 ${isScrolled ? 'text-[#1F5168] dark:text-white' : 'text-[#1F5168] dark:text-white'}`} />
               ) : (
-                <Menu className={`w-6 h-6 ${isScrolled ? 'text-[#1F5168] dark:text-white' : 'text-white'}`} />
+                <Menu className={`w-6 h-6 ${isScrolled ? 'text-[#1F5168] dark:text-white' : 'text-[#1F5168] dark:text-white'}`} />
               )}
             </button>
           </div>

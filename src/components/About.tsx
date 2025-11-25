@@ -53,19 +53,19 @@ const About = () => {
             {/* Text Content */}
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-[#7C8A96] dark:text-gray-300">
-                A <span className="font-semibold text-[#133A4C] dark:text-white">Experience Administração</span> combina 
+                A <span className="font-semibold text-[#133A4C] dark:text-white">Experience Administração</span> combina
                 experiência local e tecnologia para oferecer gestão condominial transparente e eficiente.
               </p>
-              
+
               <p className="text-lg leading-relaxed text-[#7C8A96] dark:text-gray-300">
-                Atuamos em <span className="font-semibold text-[#1F5168] dark:text-[#0C6E8E]">Natal e região</span>, 
-                cuidando da administração, contabilidade, assessoria jurídica e serviços operacionais para 
+                Atuamos em <span className="font-semibold text-[#1F5168] dark:text-[#0C6E8E]">Natal e região</span>,
+                cuidando da administração, contabilidade, assessoria jurídica e serviços operacionais para
                 síndicos e moradores viverem com tranquilidade e segurança.
               </p>
 
               <div className="bg-gradient-to-br from-[#E5EBEE] to-white dark:from-slate-800 dark:to-slate-700 p-6 rounded-2xl">
                 <p className="text-[#133A4C] dark:text-white font-medium text-lg">
-                  "Nossa missão é transformar a gestão condominial através da transparência, 
+                  "Nossa missão é transformar a gestão condominial através da transparência,
                   tecnologia e atendimento personalizado."
                 </p>
               </div>
@@ -75,13 +75,13 @@ const About = () => {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://images.pexels.com/photos/497391/pexels-photo-497391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Edifício residencial moderno representando gestão condominial"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
-              
+
               {/* Floating Card */}
               <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl">
                 <div className="text-center">
@@ -108,11 +108,11 @@ const About = () => {
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#0C6E8E] to-[#1F5168] rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    
+
                     <h3 className="text-lg font-bold text-[#133A4C] dark:text-white mb-2">
                       {item.title}
                     </h3>
-                    
+
                     <p className="text-sm text-[#7C8A96] dark:text-gray-300 leading-relaxed">
                       {item.description}
                     </p>
