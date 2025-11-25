@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown, ExternalLink, MessageCircle } from 'lucide-react';
+import { CONTACT_INFO } from '../constants';
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -13,13 +14,13 @@ const Hero = () => {
     const message = encodeURIComponent(
       'Olá! Gostaria de solicitar uma proposta para gestão condominial da Experience Administração.'
     );
-    window.open(`https://wa.me/5584991776106?text=${message}`, '_blank');
+    window.open(`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=${message}`, '_blank');
   };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#E5EBEE] via-white to-[#E5EBEE] dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#E5EBEE] via-white to-[#E5EBEE] dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 pt-32"
     >
       {/* Liquid Glass Background Effects */}
       <div className="absolute inset-0">

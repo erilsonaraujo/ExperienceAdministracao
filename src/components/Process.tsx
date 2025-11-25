@@ -1,5 +1,6 @@
 import React from 'react';
-import { Search, FileText, Settings, BarChart3, ArrowRight } from 'lucide-react';
+import { Search, FileText, ClipboardCheck, Key } from 'lucide-react';
+import { CONTACT_INFO } from '../constants';
 
 const Process = () => {
   const steps = [
@@ -19,32 +20,28 @@ const Process = () => {
     },
     {
       number: '03',
-      icon: Settings,
+      icon: ClipboardCheck, // Changed from Settings
       title: 'Implantação',
       description: 'Implementação gradual dos serviços com acompanhamento próximo e ajustes conforme necessário.',
       details: ['Transição suave', 'Treinamento de equipe', 'Configuração de sistemas', 'Acompanhamento próximo']
     },
     {
       number: '04',
-      icon: BarChart3,
+      icon: Key, // Changed from BarChart3
       title: 'Relatórios',
       description: 'Relatórios periódicos detalhados com indicadores de performance e resultados alcançados.',
       details: ['Relatórios mensais', 'Indicadores de performance', 'Prestação de contas', 'Análise de resultados']
     }
   ];
 
-  const handleIniciarProcesso = () => {
-    const message = encodeURIComponent(
-      'Olá! Gostaria de iniciar o processo de diagnóstico para meu condomínio. Podem agendar uma visita?'
-    );
-    window.open(`https://wa.me/5584991776106?text=${message}`, '_blank');
-  };
+  // handleIniciarProcesso function removed as it's no longer used by the new CTA
 
   return (
     <section
       id="processos"
-      className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300"
+      className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300 relative"
     >
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] dark:opacity-[0.05] pointer-events-none"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -113,7 +110,7 @@ const Process = () => {
                     {index < steps.length - 1 && (
                       <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
                         <div className="w-8 h-8 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-lg border-2 border-[#0C6E8E]">
-                          <ArrowRight className="w-4 h-4 text-[#0C6E8E]" />
+                          {/* ArrowRight icon removed */}
                         </div>
                       </div>
                     )}
@@ -132,13 +129,15 @@ const Process = () => {
               <p className="text-xl text-[#7C8A96] dark:text-gray-300 mb-8 max-w-2xl mx-auto">
                 Agende uma visita gratuita para diagnóstico completo do seu condomínio
               </p>
-              <button
-                onClick={handleIniciarProcesso}
-                className="bg-gradient-to-r from-[#0C6E8E] to-[#1F5168] hover:from-[#0A5A73] hover:to-[#1A4559] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+              <a
+                href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-[#0C6E8E] to-[#1F5168] hover:from-[#0A5A73] hover:to-[#1A4559] text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
               >
-                Agendar Diagnóstico Gratuito
-              </button>
-              
+                Começar Agora
+              </a>
+
               <p className="text-sm text-[#7C8A96] dark:text-gray-400 mt-4">
                 * Sem compromisso • Atendimento em até 24h
               </p>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { MapPin, Mail, Phone, Clock, ExternalLink, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock, ExternalLink, Instagram } from 'lucide-react';
+import { CONTACT_INFO } from '../constants';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,35 +29,21 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold">Experience</span>
             </div>
-            
+
             <p className="text-gray-300 leading-relaxed">
               Gestão condominial com transparência, tecnologia e excelência em Natal/RN.
             </p>
 
             {/* Social Media */}
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-[#0C6E8E] rounded-lg flex items-center justify-center transition-colors duration-200"
-                aria-label="Facebook da Experience Administração"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-[#0C6E8E] rounded-lg flex items-center justify-center transition-colors duration-200"
-                aria-label="Instagram da Experience Administração"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-[#0C6E8E] rounded-lg flex items-center justify-center transition-colors duration-200"
-                aria-label="LinkedIn da Experience Administração"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
+            <a
+              href="https://www.instagram.com/eacondominio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-white/10 hover:bg-[#0C6E8E] rounded-lg flex items-center justify-center transition-colors duration-200"
+              aria-label="Instagram da Experience Administração"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
           </div>
 
           {/* Quick Links */}
@@ -97,22 +84,22 @@ const Footer = () => {
                   <span className="text-sm">Atendemos toda região metropolitana</span>
                 </span>
               </li>
-              
+
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#0C6E8E] flex-shrink-0" />
-                <a 
-                  href="https://wa.me/5584991776106" 
-                  target="_blank" 
+                <a
+                  href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}`}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-[#0C6E8E] transition-colors duration-200"
                 >
-                  (84) 99177-6106
+                  {CONTACT_INFO.WHATSAPP_DISPLAY}
                 </a>
               </li>
-              
+
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#0C6E8E] flex-shrink-0" />
-                <a 
+                <a
                   href="mailto:contato@eadministracao.com.br"
                   className="text-gray-300 hover:text-[#0C6E8E] transition-colors duration-200"
                 >
@@ -125,7 +112,7 @@ const Footer = () => {
           {/* Business Hours & Access */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-[#0C6E8E]">Horários & Acesso</h3>
-            
+
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-[#0C6E8E] mt-1 flex-shrink-0" />
@@ -155,27 +142,27 @@ const Footer = () => {
             <p className="text-gray-400 text-sm text-center md:text-left">
               © {currentYear} Experience Administração de Condomínios — Todos os direitos reservados.
             </p>
-            
-            <div className="text-gray-500 text-xs text-center md:text-right">
-              <p>
-                Desenvolvimento e tecnologia por{' '}
-                <a 
-                  href="https://erilsondigital.com" 
-                  target="_blank" 
+
+            <div className="text-gray-500 text-xs text-center md:text-right bg-white/5 p-4 rounded-xl border border-white/10">
+              <p className="font-medium text-gray-400 mb-2">Desenvolvimento e Tecnologia</p>
+              <p className="mb-1">
+                <a
+                  href="https://erilsondigital.com"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0C6E8E] hover:text-white transition-colors duration-200"
+                  className="text-[#0C6E8E] hover:text-white transition-colors duration-200 font-bold text-sm"
                 >
                   Erilson Araujo
                 </a>
               </p>
-              <p className="mt-1">
-                WhatsApp:{' '}
-                <a 
-                  href="https://wa.me/5584991502101" 
-                  target="_blank" 
+              <p>
+                <a
+                  href="https://wa.me/5584991502101"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0C6E8E] hover:text-white transition-colors duration-200"
+                  className="text-gray-400 hover:text-[#0C6E8E] transition-colors duration-200 flex items-center justify-end gap-1"
                 >
+                  <Phone className="w-3 h-3" />
                   +55 84 99150-2101
                 </a>
               </p>

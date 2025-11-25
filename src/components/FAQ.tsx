@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { CONTACT_INFO } from '../constants';
 
 const FAQ = () => {
   const [openQuestion, setOpenQuestion] = useState<number | null>(0);
@@ -63,7 +64,7 @@ const FAQ = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#0C6E8E] to-[#1F5168] rounded-2xl mb-6">
               <HelpCircle className="w-8 h-8 text-white" />
             </div>
-            
+
             <h2 className="text-4xl lg:text-5xl font-bold text-[#133A4C] dark:text-white mb-6">
               Perguntas{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0C6E8E] to-[#1F5168]">
@@ -99,7 +100,7 @@ const FAQ = () => {
                     )}
                   </div>
                 </button>
-                
+
                 {openQuestion === index && (
                   <div className="px-8 pb-6">
                     <div className="border-t border-[#E5EBEE] dark:border-slate-600 pt-6">
@@ -122,16 +123,15 @@ const FAQ = () => {
               <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
                 Nossa equipe está pronta para esclarecer todas suas dúvidas sobre gestão condominial
               </p>
-              <button
-                onClick={() => {
-                  const message = encodeURIComponent('Olá! Tenho algumas dúvidas sobre os serviços da Experience Administração. Podem me ajudar?');
-                  window.open(`https://wa.me/5584991776106?text=${message}`, '_blank');
-                }}
-                className="bg-white hover:bg-gray-100 text-[#133A4C] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              <a
+                href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Tenho algumas dúvidas sobre os serviços da Experience Administração. Podem me ajudar?')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#0C6E8E] hover:bg-[#0A5A73] text-white px-8 py-3 rounded-full transition-colors duration-200 font-medium"
               >
                 Falar com Especialista
-              </button>
-              
+              </a>
+
               <p className="text-sm opacity-75 mt-4">
                 Resposta garantida em até 2 horas no horário comercial
               </p>
